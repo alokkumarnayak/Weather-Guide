@@ -1,0 +1,59 @@
+<div
+  class="list-page-nothing"
+  *ngIf="cityclimate.length == 0; else showList">
+  <div class="list-page-item">
+    <img src="assets/images/icons/icon_nothing.svg" />
+  </div>
+  <div class="list-page-item">
+    <span>{{ errorMessage }}</span>
+  </div>
+</div>
+
+<ng-template #showList>
+  <div class="list-page-toolbar">
+    <p class="toolbar item1">{{ status }}</p>
+    <button type="button" class="transparent-button" (click)="removall()">
+      <p class="toolbar item2">{{ buttonName }}</p>
+    </button>
+  </div>
+  <ul class="weather-list" >
+    <li *ngFor="let weather of cityclimate;index as i" >
+      <button type="button" class="cell-button" (click)="Click(weather)">
+        <div class="row">
+         
+          <div class="list-border" [ngStyle]="{ 'background-color': getbackgroundColor(i) }">
+            <div class="list-start" [ngStyle]="{ color: getTitleColor(i) }">
+              <p>{{ weather?.name }}</p>
+            </div>
+            <div class="list-middle">
+              <div>
+                <img class="weather-status-icon" src="{{ getIcon(i) }}" />
+              </div>
+              <div class="degree">
+                <p>{{ weather?.main?.temp }}</p>
+              </div>
+              <div class="degree-symbol"><span>&#176;C</span></div>
+              <div class="temperature">
+                <p>{{ getWeatherDescription(i) }}</p>
+              </div>
+            </div>
+          
+            <button type="button" class="transparent-button" (click)="changeFavouritefromList(i)">
+              <div class="list-last">
+                <div></div>
+                <img
+                  class="item2"
+                  src="{{ getbuttonImage(i) }}"
+                  width="20px"
+                  height="20px"
+                />
+              </div>
+            </button>
+          </div>
+
+
+        </div>
+      </button>
+    </li>
+  </ul>
+</ng-template>
