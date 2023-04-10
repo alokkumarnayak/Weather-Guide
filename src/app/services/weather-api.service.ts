@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, Subject, throwError } from 'rxjs';
-import { WeatherObject } from 'src/common/weather';
-import { GeoLocation } from 'src/common/geoLocation';
+import { WeatherObject } from 'src/app/shared/weather';
+import { GeoLocation } from 'src/app/shared/geoLocation';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { switchMap, map } from 'rxjs/operators';
-import { API } from 'src/common/API';
+import { API } from 'src/app/shared/API';
 
 @Injectable({
   providedIn: 'root'

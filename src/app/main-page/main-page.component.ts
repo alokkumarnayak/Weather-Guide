@@ -1,10 +1,10 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
-import { WeatherObject } from 'src/common/weather';
+import { WeatherObject } from 'src/app/shared/weather';
 import { EventEmitter } from '@angular/core';
-import { Constants } from 'src/common/Constants';
-import { Colors } from 'src/common/Colors';
-import { Common } from 'src/common/Common';
+import { Constants } from 'src/app/shared/Constants';
+import { Colors } from 'src/app/shared/Colors';
+import { Common } from 'src/app/shared/Common';
 import { ActivatedRoute } from '@angular/router';
 
 export interface WeatherAttribute {

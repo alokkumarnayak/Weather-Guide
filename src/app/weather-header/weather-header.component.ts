@@ -1,9 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output, NgModule } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
-import { Constants } from 'src/common/Constants';
-import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
-import { GeoLocation } from 'src/common/geoLocation';
+import { Constants } from 'src/app/shared/Constants';
+import { GeoLocation } from 'src/app/shared/geoLocation';
 
 @Component({
   selector: 'app-weather-header',

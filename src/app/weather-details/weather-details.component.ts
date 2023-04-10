@@ -1,13 +1,11 @@
 import { Component,Input } from '@angular/core';
-import { WeatherObject } from 'src/common/weather';
-import { GeoLocation } from 'src/common/geoLocation';
-import { WeatherApiService } from 'src/app/service-api/weather-api.service';
-import { Constants } from 'src/common/Constants';
-import { PopupWindowComponent } from '../popup-window/popup-window.component';
+import { WeatherObject } from 'src/app/shared/weather';
+import { GeoLocation } from 'src/app/shared/geoLocation';
+import { WeatherApiService } from 'src/app/services/weather-api.service';
+import { Constants } from 'src/app/shared/Constants';
+import { PopupWindowComponent } from '../shared/popup-window/popup-window.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-//import { WeatherHeaderComponent } from '../weather-header/weather-header.component';
 import { Router } from '@angular/router';
-
 
 
 @Component({

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherObject } from 'src/common/weather';
-import { GeoLocation } from 'src/common/geoLocation';
-import { Constants } from 'src/common/Constants';
-import { WeatherApiService } from 'src/app/service-api/weather-api.service';
+import { WeatherObject } from 'src/app/shared/weather';
+import { GeoLocation } from 'src/app/shared/geoLocation';
+import { Constants } from 'src/app/shared/Constants';
+import { WeatherApiService } from 'src/app/services/weather-api.service';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home-weather',

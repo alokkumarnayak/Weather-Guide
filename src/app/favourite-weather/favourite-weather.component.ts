@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { WeatherObject } from 'src/common/weather';
-import { Colors } from 'src/common/Colors';
-import { Common } from 'src/common/Common';
+import { WeatherObject } from 'src/app/shared/weather';
+import { Colors } from 'src/app/shared/Colors';
+import { Common } from 'src/app/shared/Common';
 
 @Component({
   selector: 'app-favourite-weather',
