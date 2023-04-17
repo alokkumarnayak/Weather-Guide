@@ -9,6 +9,7 @@ import { PopupWindowComponent } from 'src/app/shared/popup-window/popup-window.c
 import { MainPageComponent } from '../main-page/main-page.component';
 import { WeatherDetailsComponent } from '../weather-details/weather-details.component';
 import { HomeWeatherRoutingModule } from './home-weather-routing.module';
+import { HomeWeatherComponent } from './home-weather.component';
 
 
 @NgModule({
@@ -18,14 +19,16 @@ import { HomeWeatherRoutingModule } from './home-weather-routing.module';
     FavouriteWeatherComponent,
     PopupWindowComponent,
     MainPageComponent,
-    WeatherDetailsComponent
+    WeatherDetailsComponent,
+    HomeWeatherComponent
   ],
   exports: [
     SearchedWeatherComponent,
     WeatherHeaderComponent,
     FavouriteWeatherComponent,
     MainPageComponent,
-    WeatherDetailsComponent
+    WeatherDetailsComponent,
+    HomeWeatherComponent
   ],
   imports: [
     CommonModule,
