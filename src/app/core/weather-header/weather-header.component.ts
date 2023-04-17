@@ -21,6 +21,7 @@ export class WeatherHeaderComponent implements OnInit {
   @Output() searchValue = new EventEmitter<any>();
 
   constructor() {
+    console.log('WeatherHeader Component Started');
     this.userSearchUpdate
       .pipe(debounceTime(1000)) //distinctUntilChanged()
       .subscribe((value) => {

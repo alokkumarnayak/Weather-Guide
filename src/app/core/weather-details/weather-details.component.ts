@@ -3,10 +3,9 @@ import { WeatherObject } from 'src/app/shared/weather';
 import { GeoLocation } from 'src/app/shared/geoLocation';
 import { WeatherApiService } from 'src/app/services/weather-api.service';
 import { Constants } from 'src/app/shared/Constants';
-import { PopupWindowComponent } from '../shared/popup-window/popup-window.component';
+import { PopupWindowComponent } from 'src/app/shared/popup-window/popup-window.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-weather-details',
@@ -31,7 +30,10 @@ export class WeatherDetailsComponent {
   public userSearch: string = '';
   private key: string = 'savelocal';
 
-  constructor(private router: Router, public readonly dialog: MatDialog, private weatherApiService: WeatherApiService) {}
+  constructor(private router: Router, public readonly dialog: MatDialog, private weatherApiService: WeatherApiService) 
+  {
+    console.log('Weather Detail Component Started');
+  }
 
   ngOnChanges() {}
 

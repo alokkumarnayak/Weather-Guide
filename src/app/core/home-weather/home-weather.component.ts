@@ -23,7 +23,10 @@ export class HomeWeatherComponent implements OnInit {
   public userSearch: string = '';
   private key: string = 'savelocal';
 
-  constructor(private router: Router, private weatherApiService: WeatherApiService) {}
+  constructor(private router: Router, private weatherApiService: WeatherApiService) 
+  {
+    console.log('HomeWeather Component started ');
+  }
 
   ngOnChanges() {}
 
